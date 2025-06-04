@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 24px 156px;
+  font-family: sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1158px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 1128px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gallery-item {
+    flex: 0 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+  }
+
+  .gallery-link {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-link:hover {
+    transform: scale(1.05);
+  }
+
+  .gallery-image {
+    width: 360px;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    cursor: zoom-in;
+  }
+
+  /* Modal için arka plan */
+  .sl-overlay {
+    background: rgba(46, 47, 66, 0.8);
+  }
+
+  .sl-wrapper {
+    background: rgb(89, 90, 105);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  }
+  /* Modal içindeki img */
+  .sl-image img {
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  /* Çarpı simgesi (kapatma butonu) */
+  .sl-wrapper .sl-close {
+    color: #fff;
+    stroke: #fff;
+    fill: #fff;
+  }
+
+  .sl-wrapper .sl-prev,
+  .sl-wrapper .sl-next {
+    filter: brightness(0) invert(1); /* simgeyi beyaza dönüştürür */
+  }
+
+  /* Sayfa sayacı (1/9) */
+  .sl-wrapper .sl-counter {
+    color: #fff;
+  }
+}
+
+/* Mobil (maksimum 767px) */
+@media (max-width: 767px) {
+  .gallery-item {
+    list-style: none;
+    padding: 0;
+    flex: 0 1 100%; /* Tek sütun */
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet (768px - 1157px arası) */
+@media (min-width: 768px) and (max-width: 1157px) {
+  .gallery-item {
+    list-style: none;
+    padding: 0;
+    flex: 0 1 calc(50% - 10px); /* İki sütun */
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: auto;
+  }
+}

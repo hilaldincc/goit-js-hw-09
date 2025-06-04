@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+}
+
+.feedback-form {
+  width: 408px;
+  height: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Etiketler iç içe gireceği için input ve textarea stilleri */
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  transition: border 0.3s, box-shadow 0.3s;
+  font-family: inherit;
+}
+
+/* Hover durumu */
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border-color: #000;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: none;
+  border: 1px solid #ccc; /* normal haliyle aynı */
+  box-shadow: none;
+}
+
+/* Submit butonu */
+.feedback-form button {
+  width: 95px;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-start;
+}
+
+/* Hover durumu */
+.feedback-form button:hover {
+  background-color: #6c8cff;
+}
